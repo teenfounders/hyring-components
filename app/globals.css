@@ -6,8 +6,87 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg-brown-border:rgb(70 43 52/1);
 }
-
+.bg-custom-bg {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 249 243/var(--tw-bg-opacity))
+}
+.border-primary-brown {
+    --tw-border-opacity: 1;
+    border-color: rgb(70 43 52/var(--tw-border-opacity))
+}
+.bg-primary-brown {
+    --tw-bg-opacity: 1;
+    background-color: rgb(70 43 52/var(--tw-bg-opacity))
+}
+.bg-custom-bg {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 249 243/var(--tw-bg-opacity));
+}
+.fill-custom-green {
+    fill: #b6eccc;
+}
+.bg-custom-green {
+    --tw-bg-opacity: 1;
+    background-color: rgb(182 236 204/var(--tw-bg-opacity));
+}
+.bg-primary-orange {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 182 94/var(--tw-bg-opacity));
+}
+.bg-custom-blue {
+    --tw-bg-opacity: 1!important;
+    background-color: rgb(185 200 255/var(--tw-bg-opacity))!important;
+}
+.custom-green {
+    --tw-bg-opacity: 1!important;
+    background-color: rgb(182 236 204/var(--tw-bg-opacity))!important;
+}
+.text-secondary-orange {
+    --tw-text-opacity: 1;
+    color: rgb(234 162 75/var(--tw-text-opacity));
+}
+.text-primary-brown {
+    --tw-text-opacity: 1;
+    color: rgb(70 43 52/var(--tw-text-opacity));
+}
+.text-custom-grey {
+    --tw-text-opacity: 1;
+    color: rgb(114 114 114/var(--tw-text-opacity));
+}
+.footer {
+    background-color: #fff;
+    background-image: url(https://hyring.com/_next/static/media/mesh.0e19b477.png);
+    margin-bottom: 40px;}
+.text-quaternary-color {
+    --tw-text-opacity: 1;
+    color: rgb(190 124 45/var(--tw-text-opacity));
+}
+.text-secondary-color {
+    --tw-text-opacity: 1;
+    color: rgb(70 43 52/var(--tw-text-opacity));
+}
+.bg-secondary-color {
+    --tw-bg-opacity: 1;
+    background-color: rgb(70 43 52/var(--tw-bg-opacity));
+}
+.text-quaternary-color {
+    --tw-text-opacity: 1;
+    color: rgb(190 124 45/var(--tw-text-opacity));
+}
+@font-face {
+    font-family: WhyteInktrap-Bold;
+    src: url('../static/fonts/WhyteInktrap-Bold.woff') format('woff2');
+}
+@font-face {
+    font-family: WhyteInktrap-Reagular;
+    src: url('../static/fonts/WhyteInktrap-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: WhyteInktrap-Medium;
+    src: url('../static/fonts/WhyteInktrap-Medium.woff2') format('woff2');
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -15,13 +94,26 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+::-webkit-scrollbar {
+  width: 2px;
+  display:none;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+   background-color: #F1EAE4;
+}
+
+.divborder:hover{
+    border-radius: 4px;
+   transform: translate(-0.05em, -0.05em);
+   transition-duration: 300ms;
+  box-shadow: 0.25em 0.25em var(--bg-brown-border);
+}
+/* scale in and out animation */
+@keyframes scaleInOut {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
 }
