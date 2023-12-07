@@ -202,7 +202,7 @@ const Navbar = (props: Props) => {
             <Link href={"/"} className="md:hidden">
               <div className="w-full cursor-pointer xl:h-[57px]  relative  ">
                 <div className="w-full px-5 md:px-0 md:w-[13rem] button-hover    h-[44px] xl:h-[52px] border bg-[#FFB65E] animate-glow rounded-[4px] border-primary-brown flex justify-center items-center relative z-1 ">
-                  <div className="flex items-center gap-1">
+                  <div onClick={onclick} className="flex items-center gap-1">
                     <div className="  mr-1 font-medium text-lg md:text-lg">
                       Unlock Access
                     </div>
