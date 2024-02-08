@@ -51,7 +51,7 @@ const SpinComponent = (props: Props) => {
                 >
                   <Image
                     src={
-                      "	https://hyring.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPersonCircle3.5eb3059e.png&w=96&q=100"
+                      "https://hyring.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPersonCircle3.5eb3059e.png&w=96&q=100"
                     }
                     width={400 / 2}
                     style={{
@@ -85,7 +85,7 @@ const SpinComponent = (props: Props) => {
                 >
                   <Image
                     src={
-                      "https://hyring.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPersonCircle2.fce75f81.png&w=96&q=100"
+                      "https://hyring.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPersonCircle4.99aae2be.png&w=96&q=100"
                     }
                     width={400 / 2}
                     style={{
