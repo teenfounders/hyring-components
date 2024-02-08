@@ -8,6 +8,11 @@
   --background-end-rgb: 255, 255, 255;
   --bg-brown-border:rgb(70 43 52/1);
 }
+.grid-cols-fluid {
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+}
+
+
 .bg-custom-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(255 249 243/var(--tw-bg-opacity))
@@ -17,6 +22,10 @@
     border-color: rgb(70 43 52/var(--tw-border-opacity))
 }
 .bg-primary-brown {
+    --tw-bg-opacity: 1;
+    background-color: rgb(70 43 52/var(--tw-bg-opacity))
+}
+.primary-brown {
     --tw-bg-opacity: 1;
     background-color: rgb(70 43 52/var(--tw-bg-opacity))
 }
@@ -108,7 +117,54 @@ body {
    transition-duration: 300ms;
   box-shadow: 0.25em 0.25em var(--bg-brown-border);
 }
+
+.network_circle_rotate {
+    border: 2px dashed #462b34;
+    border-radius: 50%;
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 350px;
+    margin: 40px auto;
+    place-content: center;
+}
+
+    .network_circle_rotate-item {
+        animation: spinRight 12s var(--d, 0s) linear infinite;
+        border-radius: 50%;
+        grid-area: 1/1;
+        /* left: 130px; */
+        position: relative;
+        text-align: center;
+        /* top: 120px; */
+        transform: rotate(0) translate(173px) rotate(0);
+    }
+    .network_circle_rotate-item-left {
+        animation: spinLeft 12s var(--d, 0s) linear infinite;
+        border-radius: 50%;
+        grid-area: 1/1;
+        /* left: 130px; */
+        position: relative;
+        text-align: center;
+        /* top: 120px; */
+        transform: rotate(0) translate(173px) rotate(0);
+    }
 /* scale in and out animation */
+@keyframes spinLeft {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes spinRight {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 @keyframes scaleInOut {
   0%, 100% {
     transform: scale(0);

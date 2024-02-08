@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import React from "react";
 import Image from "next/image";
+ 
 import aboutimg1 from "@/public/aboutimg1.svg";
 import aboutimg2 from "@/public/aboutimg2.svg";
 import aboutimg3 from "@/public/aboutimg3.svg";
@@ -9,17 +10,21 @@ import aboutimg4 from "@/public/aboutimg4.svg";
 import aboutimg5 from "@/public/aboutimg5.svg";
 import aboutimg6 from "@/public/aboutimg6.svg";
 import aboutimg7 from "@/public/aboutimg7.svg";
-
+import line from '@/public/challenge/line.svg'
 import aboutimg9 from "@/public/aboutimg9.svg";
 import aboutimg10 from "@/public/aboutimg10.svg";
 import aboutimg11 from "@/public/aboutimg11.svg";
 import circle from "@/public/circle-hyring.svg";
 import Link from "next/link";
+import ChallengeBox from "@/components/ChallengeBox";
+import HyringBox from "@/components/HyringBox";
+import SpinComponent from "@/components/SpinComponent";
+ 
 type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="w-full h-full realative ">
+    <div className="w-full h-full  relative ">
       <div className="mx-auto my-0 max-w-[1800px]">
         <div className="flex flex-col items-center gap-6 ">
           <div className="mt-5 text-center font-primaryBold text-[40px]  lg:mt-[40px] lg:text-[58px]  ">
@@ -92,14 +97,14 @@ const page = (props: Props) => {
                 className="-z-10 w-full"
                 style={{ transform: " translateX(0px) translateZ(0px)" }}
               >
-                {/* <Image
-                  src={aboutimg3}
+                <Image
+                  src={''}
                   width={100}
-                  height={10}
+                  height={100}
                   alt="image"
-                  className="w-full h-full object-contain"
-                /> */}
-              </div>
+                  className="w-[107px] h-full object-fill"
+                />
+               </div>
               <div className="relative w-full">
                 <div className="absolute animate-scale-in-out -right-10 -top-3 xs:-right-16 sm:-right-24   lg:-right-32 lg:-top-6">
                   <Image
@@ -172,6 +177,15 @@ const page = (props: Props) => {
               </div>
             </div>
           </div>
+            <div className="mx-auto px-5">
+              <ChallengeBox/>
+            </div>
+            <div className="my-20 mx-auto px-5">
+              <HyringBox/>
+            </div>
+            <div className="px-5 md:px-10 aos-init aos-animate">
+              <SpinComponent/>
+            </div>
         </div>
       </div>
     </div>
