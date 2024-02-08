@@ -9,6 +9,15 @@ type Props = {
 
 const JobSeeker = ({}: Props) => {
   const { show, setShow } = useModalStore();
+
+  const onOtpSubmit =(otp:string)=>{
+console.log(otp)
+  }
+  
+  const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
+e.preventDefault()
+ 
+  }
   return (
     <div className="flex w-full   flex-col  items-center justify-center pb-3 pt-0 sm:py-6">
       <div className="relative h-fit w-full ">
@@ -36,17 +45,13 @@ const JobSeeker = ({}: Props) => {
           Enter your exclusive access code
         </h3>
         <div className="flex-center  mx-auto w-full max-w-[500px] flex-1 md:px-2">
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleSubmit}>
             <div className="flex items-center justify-between w-full h-full gap-[10px]">
-              <BoxInput />
-              <BoxInput />
-              <BoxInput />
-              <BoxInput />
-              <BoxInput />
-              <BoxInput />
+              <BoxInput length={6} onOtpSubmit={onOtpSubmit}/>
+            
             </div>
             <div className="flex-center mt-[2rem] group md:mt-[3.2rem] lg:mt-[3.6rem] xl2:mt-[4.44rem] ">
-              <button className="w-full transform-none hover:scale-105">
+              <button type='submit' className="w-full transform-none hover:scale-105">
                 <div className="h-full w-full cursor-pointer   relative  ">
                   <div className="w-full  h-[2.35rem] md:h-[3rem] xl2:h-[3.625rem]  button-hover border bg-[#FFB65E] rounded-[4px] border-primary-brown  flex justify-center items-center relative z-10 ">
                     <div className="flex items-center gap-1   ">
