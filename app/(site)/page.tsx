@@ -1,14 +1,32 @@
-"use client";
-import Button from "@/components/Button";
-import Footer from "@/components/Footer";
+'use client'
+import React, { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
+import { Loader } from "@/components/Loading";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
+  const path = usePathname();
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    // Cleanup function to clear the timeout
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="h-full w-full  ">
-      <Hero />
-    </div>
+    <React.Fragment>
+      {loading ? (
+        <div className="flex w-full justify-center items-center h-screen">
+          <Loader loadingPathname={path} />
+        </div>
+      ) : (
+        <Hero />
+      )}
+    </React.Fragment>
   );
 }

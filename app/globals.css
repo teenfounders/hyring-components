@@ -111,7 +111,16 @@
     --tw-text-opacity: 1;
     color: rgb(70 43 52/var(--tw-text-opacity));
 }
-
+ 
+    .slick-slider {
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+        touch-action: pan-y;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+}
 .bg-secondary-color {
     --tw-bg-opacity: 1;
     background-color: rgb(70 43 52/var(--tw-bg-opacity));
@@ -122,6 +131,15 @@
     color: rgb(190 124 45/var(--tw-text-opacity));
 }
 
+.slick-dots {
+    bottom: -25px;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;}
 @font-face {
     font-family: WhyteInktrap-Bold;
     src: url('../static/fonts/WhyteInktrap-Bold.woff') format('woff2');
@@ -149,7 +167,21 @@
     width: 2px;
     display: none;
 }
-
+.bg-image {
+    background-image: url('../public/Background-Image.svg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+  }
+.bg-image-square {
+    background-image: url('../public/svgexport-11.svg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+  }
+.bg-image-square-hover:hover {
+    background-image: url('../public/svgexport-11.svg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+  }
 body {
     background-color: #F1EAE4;
 }

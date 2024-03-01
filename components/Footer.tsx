@@ -14,7 +14,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="">
+    <div className="relative my-10 z-0">
       {/* there is another dive to applied here */}
       <div className="my-10 flex flex-col gap-5 px-10 font-WhyteInktrap-regular md:hidden">
         <div className="undefined group footer_adjust cursor-pointer  xl:w-[40%]  relative  ">
@@ -22,7 +22,7 @@ const Footer = (props: Props) => {
             <div className="flex flex-col items-start   gap-2 px-2 py-8 md:px-5 md:py-12">
               <div className="flex flex-row-reverse">
                 <div className="-mr-2">
-                  <Image src={avatarthree} width={40} height={40} alt="image" />
+                  <Image src={avatarthree} width={400/2} height={400/2} alt="image" />
                 </div>
                 <div className="-mr-2">
                   <Image src={avatarthree} width={40} height={40} alt="image" />
@@ -682,12 +682,12 @@ const Footer = (props: Props) => {
         <div className="sm:mt-10 pb-[5px] ml-16 mr-16 mt-0 border-t-[1px] border-solid border-[#593a25] pt-[8px] font-WhyteInktrap-regular  lg:ml-24 lg:mr-24 xl:mt-6">
           <div className="mt-2 flex flex-col justify-between  gap-y-5 md:mt-0 md:flex-row md:gap-y-0">
             <div className="flex flex-row items-center justify-around  gap-0 md:justify-center md:gap-3 lg:gap-8">
-              <Link href={""}>
+              <Link href={"/privacy-policy"}>
                 <p className="cursor-pointer font-WhyteInktrap-regular text-sm hover:opacity-70 md:text-base lg:text-lg">
                   Privacy Policy
                 </p>
               </Link>
-              <Link href={""}>
+              <Link href={'/terms-conditions'}>
                 <p className="cursor-pointer font-WhyteInktrap-regular text-sm hover:opacity-70 md:text-base lg:text-lg">
                   Terms & Conditions
                 </p>
