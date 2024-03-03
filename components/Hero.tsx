@@ -1,5 +1,10 @@
-import React from "react";
-import Image from "next/image";
+'use client'
+import React,{useState, useEffect} from "react";
+import PromiseComponent from '@/components/PromiseComponent';
+import PricingCard from '@/components/PricingCard';
+import pricesvg from '@/public/priceingsvg.svg';
+import Image from 'next/image';
+import pricing from '@/public/price.svg';
 import arrow from "@/public/navbar-hyting.svg";
 import circle from "@/public/circle-hyring.svg";
 import buttonarrow from "@/public/buttonarrow.svg";
@@ -24,6 +29,7 @@ import spnewnner from "@/public/new.svg";
 import greenstart from "@/public/greendothero.svg";
 import Marquee from "react-fast-marquee";
 import MainMarquee from "./MainMarquee";
+import PromiseMainComponent from "./PromiseMainComponent";
 type Props = {};
 let marqueeItems = [
   { image: img1, name: "System Designer" },
@@ -37,8 +43,9 @@ let marqueeItems = [
   { image: img12, name: "UI/UX Engineer" },
 ];
 const Hero = (props: Props) => {
+
   return (
-    <div className="mt-3  max-w-[100vw] md:mt-20 ">
+    <div className="mt-3  max-w-[100vw] md:mt-20 z-0 ">
       <div className="mx-auto mb-20 w-[92vw]">
         <div className="mx-auto my-0 flex max-w-[1800px] flex-col lg:flex-row">
           <div className="basis-3/5 ">
@@ -391,10 +398,12 @@ const Hero = (props: Props) => {
           </div>
         </div>
       </div>
+
+
       {/* <div className="w-screen">
         <div className="mx-auto h-[71px] min-w-full  -rotate-3 border border-primary-brown bg-primary-brown ">
           <div
-            className="py-4 overflow-hidden flex flex-row relative w-full 
+          className="py-4 overflow-hidden flex flex-row relative w-full 
         "
           >
             <Marquee>
@@ -404,23 +413,25 @@ const Hero = (props: Props) => {
                   return (
                     <div className="font-lg overflow-hidden mx-3 flex w-fit items-center gap-2 font-WhyteInktrap-regular font-normal text-white ">
                       <Image
-                        src={item.image}
-                        width={100}
-                        height={100}
-                        alt="image"
-                        className="w-fit object-contain h-fit"
+                      src={item.image}
+                      width={100}
+                      height={100}
+                      alt="image"
+                      className="w-fit object-contain h-fit"
                       />
                       <span className="">{item.name}</span>
                     </div>
                   );
                 })}
-              </div>
+                </div>
             </Marquee>
           </div>
         </div>
       </div>  */}
       <MainMarquee />
-    </div>
+       
+      <PromiseMainComponent/>
+     </div>
   );
 };
 

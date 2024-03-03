@@ -24,10 +24,10 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="w-full h-full  relative ">
+    <div className="w-full h-full text-primary-brown relative ">
       <div className="mx-auto my-0 max-w-[1800px]">
         <div className="flex flex-col items-center gap-6 ">
-          <div className="mt-5 text-center font-primaryBold text-[40px]  lg:mt-[40px] lg:text-[58px]  ">
+          <div className="mt-5 text-center font-WhyteInktrap-medium font-bold text-[40px]  lg:mt-[40px] lg:text-[58px]  ">
             Introducing
             <p className="relative mx-2 inline-block lg:mx-3">
               <span className="absolute -left-[22px] -top-4 scale-[0.7] lg:-left-1 lg:-top-3 lg:scale-[1]  ">

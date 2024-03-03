@@ -1,14 +1,17 @@
-"use client";
-import Button from "@/components/Button";
-import Footer from "@/components/Footer";
+'use client'
+import React, { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
+import { Loader } from "@/components/Loading";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
+ 
+
   return (
-    <div className="h-full w-full  ">
-      <Hero />
-    </div>
+    <React.Fragment>       
+       
+        <Hero />
+     
+    </React.Fragment>
   );
 }

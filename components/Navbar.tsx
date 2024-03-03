@@ -5,11 +5,14 @@ import logo from "@/public/logo hyring.svg";
 import logo1 from "@/public/navbar-hyting.svg";
 import React, { useState } from "react";
 import useUnlockAccessModal from "@/hooks/useUnlockAccessModal";
+import { useRouter, useSelectedLayoutSegment } from "next/navigation";
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [show, setShow] = useState(false);
   const unlockAccessModal = useUnlockAccessModal();
+  const path = useSelectedLayoutSegment()
+  console.log(path)
   const handlebar = () => {
     console.log("cliecdlk");
     setShow((prev) => !prev);
@@ -42,14 +45,14 @@ const Navbar = (props: Props) => {
             <div className="md:flex gap-8 items-center hidden xl:gap-10 ">
               <Link
                 href={"/about-us"}
-                className="text-inherit decoration-inherit"
+                className={`btn relative   text-inherit decoration-inherit`}
               >
-                <p className="inline-block relative m-0">About Us</p>
+                <p className={`inline-block ${path === 'about-us'?"btn-active ":""} relative m-0`}>About Us</p>
               </Link>
-              <Link href={"#"} className="text-inherit decoration-inherit">
+              <Link href={"/pricing"} className="btn text-inherit decoration-inherit">
                 <p className="inline-block relative m-0">Pricing</p>
               </Link>
-              <Link href={"#"} className="text-inherit decoration-inherit">
+              <Link href={"#"} className="btn text-inherit decoration-inherit">
                 <p className="inline-block relative m-0">Contact Us</p>
               </Link>
             </div>
@@ -74,15 +77,15 @@ const Navbar = (props: Props) => {
                 <div>
                   <div className="relative">
                     <div className="w-full group cursor-pointer xl:h-[57px] relative">
-                      <div className="w-full z-10 px-5 md:px-0 md:w-[13rem] h-[44px] xl:h-[52px] border bg-[#FFB65E] animate-glow rounded-[4px] border-primary-brown flex justify-center items-center relative z-1 ">
+                      <div className="w-full btn-anim z-10 px-5 md:px-0 md:w-[13rem] h-[44px] xl:h-[52px] border bg-[#FFB65E] animate-glow rounded-[4px] border-primary-brown flex justify-center items-center relative z-1 ">
                         <div className="flex items-center relative  gap-1">
                           <div
                             onClick={onclick}
-                            className="mr-1 font-medium text-lg md:text-lg"
+                            className="mr-1 font-medium text-lg btn-anim   md:text-lg"
                           >
                             Unlock Access
                           </div>
-                          <div className=" translate-x-0 group-hover:translate-x-3 duration-400 ease-in-out">
+                          <div className="move-left-and-right">
                             <Image
                               src={logo1}
                               className="w-fit h-fit"
