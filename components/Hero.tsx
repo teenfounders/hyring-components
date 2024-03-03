@@ -429,7 +429,7 @@ const Hero = (props: Props) => {
         </div>
       </div>  */}
       <MainMarquee />
-      <div className="my-10 py-5"></div>
+       
       <PromiseMainComponent/>
      </div>
   );

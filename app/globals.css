@@ -130,16 +130,46 @@
     --tw-text-opacity: 1;
     color: rgb(190 124 45/var(--tw-text-opacity));
 }
-
+/* Add this CSS to your stylesheet */
 .slick-dots {
-    bottom: -25px;
-    display: block;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
-    margin: 0;
     padding: 0;
+  }
+  
+  .slick-dots li {
+    flex: 1;
+  }
+  
+  .slick-dots li:not(:last-child) .before {
+    display: none;
+  }
+  
+  .slick-dots .before {
+    content: "";
     position: absolute;
-    text-align: center;
-    width: 100%;}
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: black;
+  }
+  
+  .slick-dots .before:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 3px;
+    background-color: white; /* Change this color to match your background */
+  }
+  
+  
 @font-face {
     font-family: WhyteInktrap-Bold;
     src: url('../static/fonts/WhyteInktrap-Bold.woff') format('woff2');
